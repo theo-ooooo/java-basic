@@ -1,6 +1,6 @@
 package class1;
 
-public class ClassStart3 {
+public class ClassStart5 {
     public static void main(String[] args) {
         Student student1 = new Student();
         student1.name = "학생1";
@@ -12,9 +12,10 @@ public class ClassStart3 {
         student2.age = 16;
         student2.grade = 80;
 
+        Student[] students = {student1, student2};
 
-        System.out.println("이름:" + student1.name + " 나이:" + student1.age + " 성적:" + student1.grade);
-        System.out.println("이름:" + student2.name + " 나이:" + student2.age + " 성적:" + student2.grade);
-
+        for (Student student : students) {
+            System.out.println("이름:" + student.name + " 나이:" + student.age + " 성적:" + student.grade);
+        }
     }
 }
